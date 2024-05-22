@@ -39,7 +39,7 @@ _inputs:
       Astro, using Bookshop components in CloudCannon**. Create your own copy,
       and start creating your own components to use in the CloudCannon CMS. |
       [See
-      Context](https://ample-sea.cloudvent.net/#:~:text=%20A%20starting,CloudCannon%20CMS.%20)
+      Context](https://ample-sea.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS.)
   markdown:To-help-save-you-time,-some-features-are-set-up-in-this-template,-like:-[Bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-Blog-with-pagination,-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[Image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-SEO-Controls-Responsive-header-and-footer-[Font-Awesome-Icons](https://fontawesomecom/search?o=randm=free)-Schemas-for-adding-new-pages-Editable-color-pallete-Markdown-styles-CloudCannon-configuration-CSS-variables:
     label: Translation (es-es)
     hidden: false
@@ -81,6 +81,6 @@ _inputs:
       * CloudCannon configuration
 
       * CSS variables | [See
-      Context](https://ample-sea.cloudvent.net/#:~:text=%20To%20help,CSS%20variables%20)
+      Context](https://ample-sea.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables%20)
 markdown:A-starting-point-for-**developers-looking-to-build-a-website-with-Astro,-using-Bookshop-components-in-CloudCannon**-Create-your-own-copy,-and-start-creating-your-own-components-to-use-in-the-CloudCannon-CMS: ""
 markdown:To-help-save-you-time,-some-features-are-set-up-in-this-template,-like:-[Bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-Blog-with-pagination,-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[Image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-SEO-Controls-Responsive-header-and-footer-[Font-Awesome-Icons](https://fontawesomecom/search?o=randm=free)-Schemas-for-adding-new-pages-Editable-color-pallete-Markdown-styles-CloudCannon-configuration-CSS-variables: ""
