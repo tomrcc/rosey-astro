@@ -2,6 +2,7 @@
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 import Markdown from '../utility/markdown.astro';
+import slugify from 'slugify';
 
 interface Props {
   background_color: string;
@@ -57,7 +58,11 @@ const headingGradientColor = block.heading.heading_gradient_color;
 <section style={`background-color: ${block.background_color};`}>
   <div class="hero-container">
     <div class="content">
-      <h1 class="heading">{block.heading.heading_text}</h1>
+      <h1
+        class="heading"
+        data-rosey={(slugify(block.heading.heading_text), { remove: /[.]/g })}>
+        {block.heading.heading_text}
+      </h1>
       <div class="subheading-text" style={`color: ${block.subheading.color};`}>
         <Markdown content={block.subheading.markdown_content} />
       </div>
