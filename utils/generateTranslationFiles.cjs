@@ -102,8 +102,14 @@ async function main(locale) {
 
         // Write the string to link to the location
         const urlHighlighterWordLength = 3;
+        // Get the first and last complete innerText element of the phrase, up to three words, and use those as the start and endHighlight
+        // Remove irrelevant(non formatting) html tags eg. ul's, inline elements like strong, italic, underline, strikethrough
+        // Split on the ending tags to get an array of complete phrases
+        // Go through and remove the rest of the html tags in there
+        // Limit each phrase to 3 words
+        // Trim and Encode the resulting phrase
         const originalPhraseArray = originalPhrase
-          .replace(/(<([^>]+)>)/g, '')
+          .replaceAll(/./g, '')
           .trim()
           .split(/[\s\n]+/);
         const startHighlight = encodeURI(
