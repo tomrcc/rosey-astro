@@ -2,18 +2,18 @@
 _inputs:
   $:
     type: object
-    comment: "[Go to Page](http://localhost:1313/)"
+    comment: "[Go to Page](https://ample-sea.cloudvent.net/)"
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: "[To be translated](http://localhost:1313/)"
+          comment: "[To be translated](https://ample-sea.cloudvent.net/)"
           inputs:
             - "[object Object]"
             - markdown:A-starting-point-for-**developers-looking-to-build-a-website-with-Astro,-using-Bookshop-components-in-CloudCannon**-Create-your-own-copy,-and-start-creating-your-own-components-to-use-in-the-CloudCannon-CMS
             - markdown:To-help-save-you-time,-some-features-are-set-up-in-this-template,-like:-[Bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-Blog-with-pagination,-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[Image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-SEO-Controls-Responsive-header-and-footer-[Font-Awesome-Icons](https://fontawesomecom/search?o=randm=free)-Schemas-for-adding-new-pages-Editable-color-pallete-Markdown-styles-CloudCannon-configuration-CSS-variables
         - heading: Translated
-          comment: "[Already translated](http://localhost:1313/)"
+          comment: "[Already translated](https://ample-sea.cloudvent.net/)"
           inputs: []
   "[object Object]":
     label: Translation (es-es)
@@ -21,7 +21,7 @@ _inputs:
     type: textarea
     options: {}
     comment: Astro Bookshop Starter | [See
-      Context](http://localhost:1313/#:~:text=Astro%20Bookshop%20Starter)
+      Context](https://ample-sea.cloudvent.net/#:~:text=Astro%20Bookshop%20Starter)
   markdown:A-starting-point-for-**developers-looking-to-build-a-website-with-Astro,-using-Bookshop-components-in-CloudCannon**-Create-your-own-copy,-and-start-creating-your-own-components-to-use-in-the-CloudCannon-CMS:
     label: Translation (es-es)
     hidden: false
@@ -39,7 +39,7 @@ _inputs:
       Astro, using Bookshop components in CloudCannon**. Create your own copy,
       and start creating your own components to use in the CloudCannon CMS. |
       [See
-      Context](http://localhost:1313/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS.)
+      Context](https://ample-sea.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS.)
   markdown:To-help-save-you-time,-some-features-are-set-up-in-this-template,-like:-[Bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-Blog-with-pagination,-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[Image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-SEO-Controls-Responsive-header-and-footer-[Font-Awesome-Icons](https://fontawesomecom/search?o=randm=free)-Schemas-for-adding-new-pages-Editable-color-pallete-Markdown-styles-CloudCannon-configuration-CSS-variables:
     label: Translation (es-es)
     hidden: false
@@ -81,6 +81,6 @@ _inputs:
       * CloudCannon configuration
 
       * CSS variables | [See
-      Context](http://localhost:1313/#:~:text=To%20help%20save,%3Cli%3ECSS%20variables%3C/li%3E%20%3C/ul%3E)
+      Context](https://ample-sea.cloudvent.net/#:~:text=To%20help%20save,%3Cli%3ECSS%20variables%3C/li%3E%20%3C/ul%3E)
 markdown:A-starting-point-for-**developers-looking-to-build-a-website-with-Astro,-using-Bookshop-components-in-CloudCannon**-Create-your-own-copy,-and-start-creating-your-own-components-to-use-in-the-CloudCannon-CMS: ""
 markdown:To-help-save-you-time,-some-features-are-set-up-in-this-template,-like:-[Bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-Blog-with-pagination,-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[Image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-SEO-Controls-Responsive-header-and-footer-[Font-Awesome-Icons](https://fontawesomecom/search?o=randm=free)-Schemas-for-adding-new-pages-Editable-color-pallete-Markdown-styles-CloudCannon-configuration-CSS-variables: ""
