@@ -10,7 +10,7 @@ const nhm = new NodeHtmlMarkdown(
 
 const inputFilePath = './rosey/base.json';
 const translationFilesDirPath = './rosey/translations';
-const baseURL = process.env.BASEURL || 'http://localhost:1313/';
+const baseURL = process.env.BASEURL || 'http://localhost:4321/';
 let locales = process.env.LOCALES?.toLowerCase().split(',') || [
   'es-es',
   'de-de',
@@ -102,13 +102,11 @@ async function main(locale) {
 
         // Write the string to link to the location
         const urlHighlighterWordLength = 3;
-        const originalPhraseArray = originalPhrase.split(/[\s\n]+/);
+        const originalPhraseArray = originalPhrase
+          .replace(/(<([^>]+)>)/g, ' ')
+          .split(/[\s\n]+/);
         const startHighlight = encodeURI(
-          originalPhraseArray
-            .slice(0, urlHighlighterWordLength)
-            .join(' ')
-            .replaceAll('<p>', '')
-            .replaceAll('</p>', '')
+          originalPhraseArray.slice(0, urlHighlighterWordLength).join(' ')
         );
         const endHighlight = encodeURI(
           originalPhraseArray
@@ -117,8 +115,6 @@ async function main(locale) {
               originalPhraseArray.length
             )
             .join(' ')
-            .replaceAll('<p>', '')
-            .replaceAll('</p>', '')
         );
         const encodedOriginalPhrase = encodeURI(
           originalPhrase.replaceAll('<p>', '').replaceAll('</p>', '')
@@ -158,19 +154,25 @@ async function main(locale) {
         }
 
         // Add each entry to our _inputs obj
-        const markdownTextInput = inputKey.slice(0, 10).includes('markdown:')
-        const inputType = markdownTextInput ? 'markdown' : originalPhrase.length < 20 ? 'text' : 'textarea';
+        const markdownTextInput = inputKey.slice(0, 10).includes('markdown:');
+        const inputType = markdownTextInput
+          ? 'markdown'
+          : originalPhrase.length < 20
+          ? 'text'
+          : 'textarea';
         const markdownOriginal = nhm.translate(originalPhrase);
-        const options = markdownTextInput ? {
-          bold: true,
-          italic: true,
-          strike: true,
-          underline: true,
-          link: true,
-          undo: true,
-          redo: true,
-          removeformat: true
-        } : {};
+        const options = markdownTextInput
+          ? {
+              bold: true,
+              italic: true,
+              strike: true,
+              underline: true,
+              link: true,
+              undo: true,
+              redo: true,
+              removeformat: true,
+            }
+          : {};
 
         cleanedOutputFileData['_inputs'][inputKey] = {
           label: `Translation (${locale})`,
