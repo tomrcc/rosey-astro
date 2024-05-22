@@ -137,15 +137,18 @@ async function main(locale) {
           endHighlightArrayAll.length
         );
 
-        const startHighlight = encodeURI(startHighlightArray.join(' ').trim());
-        const endHighlight = encodeURI(endHighlightArray.join(' ').trim());
+        const startHighlight = startHighlightArray.join(' ').trim();
+        const endHighlight = endHighlightArray.join(' ').trim();
+        const totalHighlight = startHighlight + ' ' + endHighlight;
+        const encodedStartHighlight = encodeURI(startHighlight);
+        const encodedEndHighlight = encodeURI(endHighlight);
+        console.log(totalHighlight);
 
-        // console.log('Highlighting string: ', startHighlight, endHighlight);
         const encodedOriginalPhrase = encodeURI(originalPhraseArray.join(' '));
         const pageString = page.replace('.html', '').replace('index', '');
         const locationString =
-          originalPhraseArray.length > urlHighlighterWordLength
-            ? `[See Context](${baseURL}${pageString}#:~:text=${startHighlight},${endHighlight})`
+          originalPhrase.length >= totalHighlight.length
+            ? `[See Context](${baseURL}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
             : `[See Context](${baseURL}${pageString}#:~:text=${encodedOriginalPhrase})`;
 
         // Create the inputs obj if there is none
