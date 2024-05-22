@@ -1,47 +1,46 @@
-hugo-rosey-demo: ""
+"[object Object]": ""
 _inputs:
   $:
     type: object
-    comment: "[Go to Page](https://rugged-mandolin.cloudvent.net/)"
+    comment: "[Go to Page](http://localhost:1313/)"
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: "[To be translated](https://rugged-mandolin.cloudvent.net/)"
+          comment: "[To be translated](http://localhost:1313/)"
           inputs:
-            - hugo-rosey-demo
-            - keep-what-you-need-delete-the-rest
-            - read-more
+            - "[object Object]"
+            - markdown:A-starting-point-for-**developers-looking-to-build-a-website-with-Astro,-using-Bookshop-components-in-CloudCannon**-Create-your-own-copy,-and-start-creating-your-own-components-to-use-in-the-CloudCannon-CMS
+            - markdown:To-help-save-you-time,-some-features-are-set-up-in-this-template,-like:-[Bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-Blog-with-pagination,-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[Image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-SEO-Controls-Responsive-header-and-footer-[Font-Awesome-Icons](https://fontawesomecom/search?o=randm=free)-Schemas-for-adding-new-pages-Editable-color-pallete-Markdown-styles-CloudCannon-configuration-CSS-variables
         - heading: Translated
-          comment: "[Already translated](https://rugged-mandolin.cloudvent.net/)"
-          inputs:
-            - make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey
-            - markdown:a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configurationa-new-test-paragraph-with-some-markdown-to-uputu-the-demo-through-its-spacess-testsa-line-breakanother-new-paragraph
-            - new-heading
-  hugo-rosey-demo:
-    label: Translation (de-de)
-    hidden: false
-    type: text
-    options: {}
-    comment: Hugo Rosey Demo | [See
-      Context](https://rugged-mandolin.cloudvent.net/#:~:text=Hugo%20Rosey%20Demo)
-  keep-what-you-need-delete-the-rest:
+          comment: "[Already translated](http://localhost:1313/)"
+          inputs: []
+  "[object Object]":
     label: Translation (de-de)
     hidden: false
     type: textarea
     options: {}
-    comment: Keep what you need. Delete the rest. | [See
-      Context](https://rugged-mandolin.cloudvent.net/#:~:text=Keep%20what%20you,Delete%20the%20rest.)
-  make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey:
+    comment: Astro Bookshop Starter | [See
+      Context](http://localhost:1313/#:~:text=Astro%20Bookshop%20Starter)
+  markdown:A-starting-point-for-**developers-looking-to-build-a-website-with-Astro,-using-Bookshop-components-in-CloudCannon**-Create-your-own-copy,-and-start-creating-your-own-components-to-use-in-the-CloudCannon-CMS:
     label: Translation (de-de)
     hidden: false
-    type: textarea
-    options: {}
-    comment: Make your own copy of this repository. Reference it or use it as a
-      template to get up and running with translation workflows in CloudCannon
-      using Rosey. | [See
-      Context](https://rugged-mandolin.cloudvent.net/#:~:text=Make%20your%20own,CloudCannon%20using%20Rosey.)
-  markdown:a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configurationa-new-test-paragraph-with-some-markdown-to-uputu-the-demo-through-its-spacess-testsa-line-breakanother-new-paragraph:
+    type: markdown
+    options:
+      bold: true
+      italic: true
+      strike: true
+      underline: true
+      link: true
+      undo: true
+      redo: true
+      removeformat: true
+    comment: A starting point for **developers looking to build a website with
+      Astro, using Bookshop components in CloudCannon**. Create your own copy,
+      and start creating your own components to use in the CloudCannon CMS. |
+      [See
+      Context](http://localhost:1313/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS.)
+  markdown:To-help-save-you-time,-some-features-are-set-up-in-this-template,-like:-[Bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-Blog-with-pagination,-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[Image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-SEO-Controls-Responsive-header-and-footer-[Font-Awesome-Icons](https://fontawesomecom/search?o=randm=free)-Schemas-for-adding-new-pages-Editable-color-pallete-Markdown-styles-CloudCannon-configuration-CSS-variables:
     label: Translation (de-de)
     hidden: false
     type: markdown
@@ -55,48 +54,33 @@ _inputs:
       redo: true
       removeformat: true
     comment: >-
-      A demonstration of how Hugo and Rosey work in CloudCannon. This site has
-      extra setup so that we can enter translations via the CloudCannon GUI.
-      Additional languages can be set in the environment variables in
-      CloudCannon’s build configuration.
+      To help save you time, some features are set up in this template, like:
 
 
-      A new test paragraph, with **some** _**markdown to put**_ the demo through
-      its paces tests.  
+      *
+      [Bookshop](https://cloudcannon.com/documentation/guides/bookshop-astro-guide/)
 
-      A line break
+      * Blog with pagination, tags and
+      [snippets](https://docs.astro.build/en/guides/markdown-content/#using-components-in-mdx)
 
+      * [Image
+      optimization](https://docs.astro.build/en/guides/images/#image--astroassets)
 
-      Another new paragraph | [See
-      Context](https://rugged-mandolin.cloudvent.net/#:~:text=A%20demonstration%20of,Another%20new%20paragraph)
-  new-heading:
-    label: Translation (de-de)
-    hidden: false
-    type: text
-    options: {}
-    comment: New heading | [See
-      Context](https://rugged-mandolin.cloudvent.net/#:~:text=New%20heading)
-  read-more:
-    label: Translation (de-de)
-    hidden: false
-    type: text
-    options: {}
-    comment: Read More | [See
-      Context](https://rugged-mandolin.cloudvent.net/#:~:text=Read%20More)
-keep-what-you-need-delete-the-rest: ""
-make-your-own-copy-of-this-repository-reference-it-or-use-it-as-a-template-to-get-up-and-running-with-translation-workflows-in-cloudcannon-using-rosey:
-  Erstellen Sie Ihre eigene Kopie dieses Repositorys. Referenzieren Sie es oder
-  verwenden Sie es als Vorlage, um mit Rosey Übersetzungsworkflows in
-  CloudCannon zu starten.
-markdown:a-demonstration-of-how-hugo-and-rosey-work-in-cloudcannon-this-site-has-extra-setup-so-that-we-can-enter-translations-via-the-cloudcannon-gui-additional-languages-can-be-set-in-the-environment-variables-in-cloudcannons-build-configurationa-new-test-paragraph-with-some-markdown-to-uputu-the-demo-through-its-spacess-testsa-line-breakanother-new-paragraph: >-
-  Eine Demonstration, wie Hugo und Rosey in CloudCannon arbeiten. Diese Site
-  verfügt über eine zusätzliche Einrichtung, damit wir Übersetzungen über die
-  CloudCannon-GUI eingeben können. Zusätzliche Sprachen können in den
-  Umgebungsvariablen in der Build-Konfiguration von CloudCannon festgelegt
-  werden.
+      * SEO Controls
 
+      * Responsive header and footer
 
-  Ein neuer Absatz in german with some **bold** and *italic* formatting to see
-  if it comes out in locales value, and then on to the live site.
-new-heading: New heading in german for the demo
-read-more: ""
+      * [Font Awesome Icons](https://fontawesome.com/search?o=r&m=free)
+
+      * Schemas for adding new pages
+
+      * Editable color pallete
+
+      * Markdown styles
+
+      * CloudCannon configuration
+
+      * CSS variables | [See
+      Context](http://localhost:1313/#:~:text=To%20help%20save,%3Cli%3ECSS%20variables%3C/li%3E%20%3C/ul%3E)
+markdown:A-starting-point-for-**developers-looking-to-build-a-website-with-Astro,-using-Bookshop-components-in-CloudCannon**-Create-your-own-copy,-and-start-creating-your-own-components-to-use-in-the-CloudCannon-CMS: ""
+markdown:To-help-save-you-time,-some-features-are-set-up-in-this-template,-like:-[Bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-Blog-with-pagination,-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[Image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-SEO-Controls-Responsive-header-and-footer-[Font-Awesome-Icons](https://fontawesomecom/search?o=randm=free)-Schemas-for-adding-new-pages-Editable-color-pallete-Markdown-styles-CloudCannon-configuration-CSS-variables: ""
