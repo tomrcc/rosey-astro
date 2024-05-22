@@ -103,7 +103,7 @@ async function main(locale) {
         // Write the string to link to the location
         const urlHighlighterWordLength = 3;
         const originalPhraseArray = originalPhrase
-          .replace(/(<([^>]+)>)/g, ' ')
+          .replace(/(<([^>]+)>)/g, '')
           .split(/[\s\n]+/);
         const startHighlight = encodeURI(
           originalPhraseArray.slice(0, urlHighlighterWordLength).join(' ')
