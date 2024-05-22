@@ -39,7 +39,7 @@ _inputs:
       Astro, using Bookshop components in CloudCannon**. Create your own copy,
       and start creating your own components to use in the CloudCannon CMS. |
       [See
-      Context](https://ample-sea.cloudvent.net/#:~:text=A%20starting%20point%20for%20developers%20looking%20to%20build%20a%20website%20with%20Astro%20using%20Bookshop%20components%20in%20CloudCannon%20Create%20your%20own%20copy%20and%20start%20creating%20your%20own%20components%20to%20use%20in%20the%20CloudCannon%20CMS)
+      Context](https://ample-sea.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
   markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-bookshophttps://cloudcannoncom/documentation/guides/bookshop-astro-guide/-blog-with-pagination-tags-and-snippetshttps://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx-image-optimizationhttps://docsastrobuild/en/guides/images/#image-astroassets-seo-controls-responsive-header-and-footer-font-awesome-iconshttps://fontawesomecom/search?o=randm=free-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
     label: Translation (fr-fr)
     hidden: false
