@@ -104,6 +104,7 @@ async function main(locale) {
         const urlHighlighterWordLength = 3;
         const originalPhraseArray = originalPhrase
           .replace(/(<([^>]+)>)/g, '')
+          .trim()
           .split(/[\s\n]+/);
         const startHighlight = encodeURI(
           originalPhraseArray.slice(0, urlHighlighterWordLength).join(' ')
