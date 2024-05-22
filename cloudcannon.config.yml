@@ -107,7 +107,17 @@ collections_config:
         type: color
       icons:
         comment: Add an icon from the list of [Font Awesome icons](https://fontawesome.com/search?o=r&m=free). Then add it to the ```src/components/utility/icon.jsx``` file, following the existing pattern.
-
+  translations:
+    path: rosey/translations
+    output: false
+    icon: translate
+    disable_add: false
+    add_options:
+      - name: Add Language
+        icon: translate
+        href: cloudcannon:settings/build
+    disable_add_folder: true
+    disable_file_actions: true
 collection_groups:
   - heading: Pages
     collections:
