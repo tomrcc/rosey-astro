@@ -2,7 +2,13 @@
 import markdownit from 'markdown-it';
 const md = markdownit({ html: true });
 const { content } = Astro.props;
+import slugify from 'slugify';
 ---
 
 <!-- This is styled in src/styles/_markdown.scss, which also styles the blog markdown text -->
-<div class="markdown-text" set:html={md.render(content)} />
+<div
+  class="markdown-text"
+  data-rosey-ns="markdown"
+  data-rosey={slugify(content, { remove: /[.]/g })}
+  set:html={md.render(content)}
+/>
