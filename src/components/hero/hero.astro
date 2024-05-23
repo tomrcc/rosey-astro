@@ -31,7 +31,6 @@ interface Props {
   ];
 }
 
-const block = Astro.props;
 const buttons = import.meta.glob('/src/components/buttons/**/*.astro', {
   eager: true,
 });
@@ -39,6 +38,13 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/**/*.{jpeg,jpg,png,gif}',
   { eager: true }
 );
+
+const generateRoseyID = (text) => {
+  const formattedText = text.toLowerCase();
+  return slugify(formattedText, { remove: /[.*,]/g });
+};
+
+const block = Astro.props;
 
 const imageSrc = images[block.image.image_path]?.default;
 const src =
@@ -60,7 +66,7 @@ const headingGradientColor = block.heading.heading_gradient_color;
     <div class="content">
       <h1
         class="heading"
-        data-rosey={(slugify(block.heading.heading_text), { remove: /[.]/g })}>
+        data-rosey={generateRoseyID(block.heading.heading_text)}>
         {block.heading.heading_text}
       </h1>
       <div class="subheading-text" style={`color: ${block.subheading.color};`}>

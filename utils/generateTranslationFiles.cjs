@@ -1,4 +1,13 @@
-const { NodeHtmlMarkdown } = require('node-html-markdown');
+// TODO: Should we switch to uuids for the tags and just run checks over them?
+// We'd have to switch our logic to add everything to translations and locales, then delete them from both if they come up as a status of unused
+// We could run the checks after everything we've run and further update the existing generated input config
+// Eg. Could use this to generate a label like 'Out of date translation', 'New Translation'
+// Could even look into using a text differ to show what changed
+
+const {
+  NodeHtmlMarkdown,
+  NodeHtmlMarkdownOptions,
+} = require('node-html-markdown');
 
 const fs = require('file-system');
 const YAML = require('yaml');
@@ -85,6 +94,7 @@ async function main(locale) {
       // If input exists on this page
       if (inputTranslationObjectPages.includes(page)) {
         const originalPhrase = inputTranslationObj.original.trim();
+        const markdownOriginal = nhm.translate(originalPhrase);
 
         // Only add the key to our output data if it still exists in base.json
         // If entry no longer exists in base.json it's content has changed in the visual editor
@@ -102,27 +112,43 @@ async function main(locale) {
 
         // Write the string to link to the location
         const urlHighlighterWordLength = 3;
-        const originalPhraseArray = originalPhrase
-          .replace(/(<([^>]+)>)/g, ' ')
-          .split(/[\s\n]+/);
-        const startHighlight = encodeURI(
-          originalPhraseArray.slice(0, urlHighlighterWordLength).join(' ')
+        // Get the first and last complete innerText element of the phrase, up to three words, and use those as the start and endHighlight
+        // Turn into markdown
+        // Get rid of any special characters in markdown
+        // Get the first and last line of the markdown so we only have complete lines in the highlight url
+        // Get rid of links in the markdown
+        // Limit each phrase to 3 words
+        // Trim and Encode the resulting phrase
+        const originalPhraseArray = markdownOriginal
+          .trim()
+          .replaceAll(/(?:__[*#])|\[(.*?)\]\(.*?\)/gm, /$1/)
+          .replaceAll(/[&\/\\#,+()$~%.'":*?<>{}]/gm, '')
+          .split(/[\n]+/);
+        const firstPhrase = originalPhraseArray[0];
+        const lastPhrase = originalPhraseArray[originalPhraseArray.length - 1];
+        const endHighlightArrayAll = lastPhrase.split(' ');
+
+        const startHighlightArray = firstPhrase
+          .split(' ')
+          .slice(0, urlHighlighterWordLength);
+
+        const endHighlightArray = endHighlightArrayAll.slice(
+          endHighlightArrayAll.length - urlHighlighterWordLength,
+          endHighlightArrayAll.length
         );
-        const endHighlight = encodeURI(
-          originalPhraseArray
-            .slice(
-              originalPhraseArray.length - urlHighlighterWordLength,
-              originalPhraseArray.length
-            )
-            .join(' ')
-        );
-        const encodedOriginalPhrase = encodeURI(
-          originalPhrase.replaceAll('<p>', '').replaceAll('</p>', '')
-        );
+
+        const startHighlight = startHighlightArray.join(' ').trim();
+        const endHighlight = endHighlightArray.join(' ').trim();
+        const totalHighlight = startHighlight + ' ' + endHighlight;
+        const encodedStartHighlight = encodeURI(startHighlight);
+        const encodedEndHighlight = encodeURI(endHighlight);
+        console.log(totalHighlight);
+
+        const encodedOriginalPhrase = encodeURI(originalPhraseArray.join(' '));
         const pageString = page.replace('.html', '').replace('index', '');
         const locationString =
-          originalPhraseArray.length > urlHighlighterWordLength
-            ? `[See Context](${baseURL}${pageString}#:~:text=${startHighlight},${endHighlight})`
+          originalPhrase.length >= totalHighlight.length
+            ? `[See Context](${baseURL}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
             : `[See Context](${baseURL}${pageString}#:~:text=${encodedOriginalPhrase})`;
 
         // Create the inputs obj if there is none
@@ -160,7 +186,6 @@ async function main(locale) {
           : originalPhrase.length < 20
           ? 'text'
           : 'textarea';
-        const markdownOriginal = nhm.translate(originalPhrase);
         const options = markdownTextInput
           ? {
               bold: true,
