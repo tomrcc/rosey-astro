@@ -1,4 +1,4 @@
-# Astro CloudCannon Starter
+# Astro Rosey CloudCannon Starter
 
 A starting point for developers looking to build a multilingual website with Astro, Rosey, and Bookshop components in CloudCannon.
 
@@ -19,7 +19,7 @@ Rosey then uses these locales files, to generate a multilingual site.
 
 ## Getting Started
 
-- To start using this template, go to the [GitHub repository](https://github.com/CloudCannon/astro-starter/), and click `Use this template` to make your own copy.
+- To start using this template, go to the [GitHub repository](https://github.com/CloudCannon/rosey-astro/), and click `Use this template` to make your own copy.
 - Build the site on CloudCannon.
 - Create a staging site, with the environment variable `TRANSLATE=false`
 - Create a production site, with the environment variable `TRANSLATE=false`
