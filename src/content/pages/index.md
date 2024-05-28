@@ -31,7 +31,7 @@ content_blocks:
       - _bookshop_name: buttons/primary
         button_text: GitHub
         button_icon: Github
-        button_link: https://www.cloudcannon.com
+        button_link: https://www.github.com/CloudCannon/rosey-astro
         background_color: '#034ad8'
         hover_brightness: 0.85
         text_color: '#ffffff'
