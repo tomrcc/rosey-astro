@@ -16,8 +16,8 @@ content_blocks:
   - _bookshop_name: hero
     background_color: '#ffffff'
     heading:
-      heading_text: Astro Bookshop Starter
-      heading_gradient_color: '#a0a2ff'
+      heading_text: Rosey Astro Demo another word
+      heading_gradient_color: '#c8d5b9'
     subheading:
       markdown_content: >-
         A starting point for **developers looking to build a website with Astro,
