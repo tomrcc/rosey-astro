@@ -55,6 +55,7 @@ import {
   faCircleInfo,
   faFire,
   faHand,
+  faLanguage,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faLemon, faBookmark } from '@fortawesome/free-regular-svg-icons';
@@ -70,6 +71,8 @@ import {
 
 export default function Icon({ icon }) {
   switch (icon) {
+    case 'Language':
+      return <FontAwesomeIcon icon={faLanguage} />;
     case 'Envelope':
       return <FontAwesomeIcon icon={faEnvelope} />;
     case 'User':

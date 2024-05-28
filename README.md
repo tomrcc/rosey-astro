@@ -1,6 +1,6 @@
-# Astro CloudCannon Starter
+# Astro Rosey CloudCannon Starter
 
-A starting point for developers looking to build a website with Astro, using Bookshop components in CloudCannon.
+A starting point for developers looking to build a multilingual website with Astro, Rosey, and Bookshop components in CloudCannon.
 
 Create your own copy, and start creating your own components to use in the CloudCannon CMS. Build components with `.jsx` or `.astro`.
 
@@ -9,11 +9,69 @@ To try to cut down on setup time this starter template includes some commonly us
 This template is aimed at helping developers build sites quickly, rather than providing editors with a fully built editable site.
 If you are an editor looking for an already built template, have a look at [CloudCannon's templates page](https://cloudcannon.com/templates/).
 
-[See a demo version of this site](https://tiny-jackal.cloudvent.net/).
+This template uses [Rosey](https://rosey.app/) to generate a multilingual site from an English version of the site, and some translation files. Editors can enter translations manually for different languages, all in one place.
+
+Rosey generates a base.json file wherever it detects a `data-rosey=""` tag in your built site.
+From this `base.json` file we run a script that creates a translations file for each locale listed in your `LOCALES` environment variable.
+Editors can see an input for each translation in the CloudCannon UI, and can enter a translated value.
+We then run a script in our postbuild to generate the [locales files that Rosey expects](https://rosey.app/docs/#creating-locale-files) to create our multilingual site from.
+Rosey then uses these locales files, to generate a multilingual site.
 
 ## Getting Started
 
-To start using this template, go to the [GitHub repository](https://github.com/CloudCannon/astro-starter/), and click `Use this template` to make your own copy.
+- To start using this template, go to the [GitHub repository](https://github.com/CloudCannon/rosey-astro/), and click `Use this template` to make your own copy.
+- Build the site on CloudCannon.
+- Create a staging site, with the environment variable `TRANSLATE=false`
+- Create a production site, with the environment variable `TRANSLATE=false`
+- Add the locales you want to translate to to the `LOCALES` environment variable, following the format `es-es`, with each locale separated by a comma.
+- Add the environment variable `SYNC_PATHS=/rosey/` to the staging site.
+- Enter a translation, wait for the build to finish, and publish to your production site.
+- Navigate to the adjective-noun.cloudvent.net address for your production site, and see Rosey redirect to your default browser language.
+
+## Adding Translations
+
+When you add a new component using the placeholder `Hero`, or `LeftRight` components, an entry is added to our translations files to allow an editor to provide a translation.
+Once our build finishes, we can publish our translations on `staging` to our `main` branch, and Rosey will use them to generate a multilingual site for us.
+To create your own components that add inputs to our translation files, add a `data-rosey=""` tag following the format provided in the placeholder components.
+
+## Environment Variables
+
+The `SYNC_PATHS=/rosey/` environment variable tells CloudCannon to sync the generated data in the `/rosey/` directory from our postbuild back to the source repository.
+
+The `TRANSLATE=true` environment variable tells Rosey to generate a site from the data in the locales folder.
+Only set this to `true` on the production site.
+Setting this to `true` on our staging site will interfere with CloudCannon's UI, and mean we can't enter translations, or edit pages.
+
+The `LOCALES=fr-fr,de-de,es-es` tells CloudCannon to generate locale files for language codes 'fr-fr', 'de-de', and 'es-es'.
+Set this value to whichever languages you would like to generate with Rosey.
+Language codes should follow the placeholder format provided, and are separated by a comma.
+
+The `BASEURL=https://adjective-noun.cloudvent.net/` is used to generate locations of the phrase you are translating.
+This would usually be set to our staging site's preview URL, although extra logic could be added to send you to the translated version (main/production site's preview URL) instead.
+
+## Local Development & Testing
+
+To run site locally:
+
+```bash
+npm i
+npm start
+```
+
+To run Rosey locally:
+
+```bash
+hugo
+npx rosey generate --source public
+node utils/generateTranslationFiles.js
+node utils/generateLocales.js
+```
+
+To generate a multilingual site locally, run this after running the above commands:
+
+```bash
+npx rosey build --source public --dest public_translated
+```
 
 ### Commands
 
@@ -34,6 +92,19 @@ All commands are run from the root of the project, from a terminal:
 3. Run `npm start`
 
 ## Features
+
+### Rosey
+
+This template uses Rosey to create a multilingual site.
+
+To get Rosey to work in CloudCannon, follow the following steps:
+
+- Create a staging site, with the environment variable `TRANSLATE=false`
+- Create a production site, with the environment variable `TRANSLATE=false`
+- Add the locales you want to translate to to the `LOCALES` environment variable, following the format `es-es`, with each locale separated by a comma.
+- Add the environment variable `SYNC_PATHS=/rosey/` to the staging site.
+- Enter a translation, wait for the build to finish, and publish to your production site.
+- Navigate to the adjective-noun.cloudvent.net address for your production site, and see Rosey redirect to your default browser language.
 
 ### Bookshop
 

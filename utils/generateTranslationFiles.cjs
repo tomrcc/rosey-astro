@@ -59,6 +59,13 @@ async function main(locale) {
     return accumulator;
   }, []);
 
+  // console.log('Pages: ', pages);
+  // TODO: Scan the pages in a translations
+  // If a page is in a translations folder, but not the base.json the page has been deleted and we need to remove it from our translations
+
+  const translationsLocalePath = translationFilesDirPath + '/' + locale;
+  const translationsFiles = await fs.readdirSync(translationsLocalePath);
+
   // Loop through the pages
   for (item in pages) {
     const page = pages[item];
@@ -74,6 +81,18 @@ async function main(locale) {
 
     let outputFileData = {};
     let cleanedOutputFileData = {};
+
+    for (file in translationsFiles) {
+      const fileNameWithExt = translationsFiles[file];
+      const fileName = fileNameWithExt.replace('.yaml', '');
+      const filePath = translationsLocalePath + '/' + fileNameWithExt;
+      if (fileName !== pageName) {
+        fs.unlink(filePath, (err) => {
+          if (err) throw err;
+          console.log(`${filePath} was deleted`);
+        });
+      }
+    }
 
     // Get our old translations file
     if (fs.existsSync(translationFilePath)) {
@@ -118,7 +137,7 @@ async function main(locale) {
         // Get the first and last line of the markdown so we only have complete lines in the highlight url
         // Get rid of links in the markdown
         // Limit each phrase to 3 words
-        // Trim and Encode the resulting phrase
+        // Trim and encode the resulting phrase
         const originalPhraseArray = markdownOriginal
           .trim()
           .replaceAll(/(?:__[*#])|\[(.*?)\]\(.*?\)/gm, /$1/)
@@ -137,17 +156,22 @@ async function main(locale) {
           endHighlightArrayAll.length
         );
 
+        // Look to see if original phrase is 5 words or shorter
+        // if it is fallback to the encoded original phrase for the highlight link
+        const originalPhraseArrayByWord = originalPhraseArray
+          .join(' ')
+          .split(' ');
+
         const startHighlight = startHighlightArray.join(' ').trim();
         const endHighlight = endHighlightArray.join(' ').trim();
-        const totalHighlight = startHighlight + ' ' + endHighlight;
+
         const encodedStartHighlight = encodeURI(startHighlight);
         const encodedEndHighlight = encodeURI(endHighlight);
-        console.log(totalHighlight);
-
         const encodedOriginalPhrase = encodeURI(originalPhraseArray.join(' '));
+
         const pageString = page.replace('.html', '').replace('index', '');
         const locationString =
-          originalPhrase.length >= totalHighlight.length
+          originalPhraseArrayByWord.length > urlHighlighterWordLength * 2
             ? `[See Context](${baseURL}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
             : `[See Context](${baseURL}${pageString}#:~:text=${encodedOriginalPhrase})`;
 

@@ -16,13 +16,13 @@ content_blocks:
   - _bookshop_name: hero
     background_color: '#ffffff'
     heading:
-      heading_text: Astro Bookshop Starter
-      heading_gradient_color: '#a0a2ff'
+      heading_text: Rosey Astro Demo another word
+      heading_gradient_color: '#c8d5b9'
     subheading:
       markdown_content: >-
-        A starting point for **developers looking to build a website with Astro, using
-        Bookshop components in CloudCannon**. Create your own copy, and start
-        creating your own components to use in the CloudCannon CMS.
+        A starting point for **developers looking to build a website with Astro,
+        using Bookshop components in CloudCannon**. Create your own copy, and
+        start creating your own components to use in the CloudCannon CMS.
       color: '#393939'
     image:
       image_path: /src/assets/images/featured-image-5.jpg
@@ -31,7 +31,7 @@ content_blocks:
       - _bookshop_name: buttons/primary
         button_text: GitHub
         button_icon: Github
-        button_link: https://www.cloudcannon.com
+        button_link: https://www.github.com/CloudCannon/rosey-astro
         background_color: '#034ad8'
         hover_brightness: 0.85
         text_color: '#ffffff'
@@ -39,8 +39,8 @@ content_blocks:
         button_text: CloudCannon
         button_icon: CloudCannon
         button_link: https://www.cloudcannon.com
-        hover_brightness: 0.95
         text_color: '#034ad8'
+        hover_brightness: 0.95
   - _bookshop_name: left_right
     background_color: '#ffffff'
     heading:
@@ -50,11 +50,14 @@ content_blocks:
       markdown_content: >-
         To help save you time, some features are set up in this template, like:
 
-        - [Bookshop](https://cloudcannon.com/documentation/guides/bookshop-astro-guide/)
+        -
+        [Bookshop](https://cloudcannon.com/documentation/guides/bookshop-astro-guide/)
 
-        - Blog with pagination, tags and [snippets](https://docs.astro.build/en/guides/markdown-content/#using-components-in-mdx)
+        - Blog with pagination, tags and
+        [snippets](https://docs.astro.build/en/guides/markdown-content/#using-components-in-mdx)
 
-        - [Image optimization](https://docs.astro.build/en/guides/images/#image--astroassets)
+        - [Image
+        optimization](https://docs.astro.build/en/guides/images/#image--astroassets)
 
         - SEO Controls
 
@@ -71,7 +74,6 @@ content_blocks:
         - CloudCannon configuration
 
         - CSS variables
-
       color: '#393939'
     image:
       image_path: /src/assets/images/undraw-hello.svg
@@ -85,4 +87,24 @@ content_blocks:
       background_color: '#034ad8'
       hover_brightness: 0.85
       text_color: '#ffffff'
+  - _bookshop_name: left_right
+    background_color: '#FEF9EF'
+    heading:
+      heading_text: This is just five words!
+      color: '#c8d5b9'
+    text:
+      markdown_content: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      color: '#000000'
+    image:
+      image_path: /src/assets/images/undraw-hello.svg
+      alt_text: An image
+    flipped: false
+    button:
 ---

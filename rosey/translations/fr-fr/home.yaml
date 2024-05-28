@@ -1,4 +1,4 @@
-astro-bookshop-starter: ""
+markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: ""
 _inputs:
   $:
     type: object
@@ -9,19 +9,13 @@ _inputs:
         - heading: Untranslated
           comment: "[To be translated](https://ample-sea.cloudvent.net/)"
           inputs:
-            - astro-bookshop-starter
             - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
+            - markdown:lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-ut-enim-ad-minim-veniam-quis-nostrud-exercitation-ullamco-laboris-nisi-ut-aliquip-ex-ea-commodo-consequat-duis-aute-irure-dolor-in-reprehenderit-in-voluptate-velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur-excepteur-sint-occaecat-cupidatat-non-proident-sunt-in-culpa-qui-officia-deserunt-mollit-anim-id-est-laborum
             - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-bookshophttps://cloudcannoncom/documentation/guides/bookshop-astro-guide/-blog-with-pagination-tags-and-snippetshttps://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx-image-optimizationhttps://docsastrobuild/en/guides/images/#image-astroassets-seo-controls-responsive-header-and-footer-font-awesome-iconshttps://fontawesomecom/search?o=randm=free-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
+            - rosey-astro-demo-another-word
         - heading: Translated
           comment: "[Already translated](https://ample-sea.cloudvent.net/)"
           inputs: []
-  astro-bookshop-starter:
-    label: Translation (fr-fr)
-    hidden: false
-    type: textarea
-    options: {}
-    comment: Astro Bookshop Starter | [See
-      Context](https://ample-sea.cloudvent.net/#:~:text=Astro%20Bookshop%20Starter)
   markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
     label: Translation (fr-fr)
     hidden: false
@@ -40,6 +34,27 @@ _inputs:
       and start creating your own components to use in the CloudCannon CMS. |
       [See
       Context](https://ample-sea.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
+  markdown:lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-ut-enim-ad-minim-veniam-quis-nostrud-exercitation-ullamco-laboris-nisi-ut-aliquip-ex-ea-commodo-consequat-duis-aute-irure-dolor-in-reprehenderit-in-voluptate-velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur-excepteur-sint-occaecat-cupidatat-non-proident-sunt-in-culpa-qui-officia-deserunt-mollit-anim-id-est-laborum:
+    label: Translation (fr-fr)
+    hidden: false
+    type: markdown
+    options:
+      bold: true
+      italic: true
+      strike: true
+      underline: true
+      link: true
+      undo: true
+      redo: true
+      removeformat: true
+    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum. | [See
+      Context](https://ample-sea.cloudvent.net/#:~:text=Lorem%20ipsum%20dolor,id%20est%20laborum)
   markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-bookshophttps://cloudcannoncom/documentation/guides/bookshop-astro-guide/-blog-with-pagination-tags-and-snippetshttps://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx-image-optimizationhttps://docsastrobuild/en/guides/images/#image-astroassets-seo-controls-responsive-header-and-footer-font-awesome-iconshttps://fontawesomecom/search?o=randm=free-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
     label: Translation (fr-fr)
     hidden: false
@@ -82,5 +97,13 @@ _inputs:
 
       * CSS variables | [See
       Context](https://ample-sea.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
-markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: ""
+  rosey-astro-demo-another-word:
+    label: Translation (fr-fr)
+    hidden: false
+    type: textarea
+    options: {}
+    comment: Rosey Astro Demo another word | [See
+      Context](https://ample-sea.cloudvent.net/#:~:text=Rosey%20Astro%20Demo%20another%20word)
+markdown:lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-ut-enim-ad-minim-veniam-quis-nostrud-exercitation-ullamco-laboris-nisi-ut-aliquip-ex-ea-commodo-consequat-duis-aute-irure-dolor-in-reprehenderit-in-voluptate-velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur-excepteur-sint-occaecat-cupidatat-non-proident-sunt-in-culpa-qui-officia-deserunt-mollit-anim-id-est-laborum: ""
 markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-bookshophttps://cloudcannoncom/documentation/guides/bookshop-astro-guide/-blog-with-pagination-tags-and-snippetshttps://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx-image-optimizationhttps://docsastrobuild/en/guides/images/#image-astroassets-seo-controls-responsive-header-and-footer-font-awesome-iconshttps://fontawesomecom/search?o=randm=free-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
+rosey-astro-demo-another-word: ""
