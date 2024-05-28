@@ -2,18 +2,18 @@ astro-bookshop-starter: ""
 _inputs:
   $:
     type: object
-    comment: "[Go to Page](http://localhost:4321/)"
+    comment: "[Go to Page](https://ample-sea.cloudvent.net/)"
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: "[To be translated](http://localhost:4321/)"
+          comment: "[To be translated](https://ample-sea.cloudvent.net/)"
           inputs:
             - astro-bookshop-starter
             - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
             - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-bookshophttps://cloudcannoncom/documentation/guides/bookshop-astro-guide/-blog-with-pagination-tags-and-snippetshttps://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx-image-optimizationhttps://docsastrobuild/en/guides/images/#image-astroassets-seo-controls-responsive-header-and-footer-font-awesome-iconshttps://fontawesomecom/search?o=randm=free-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
         - heading: Translated
-          comment: "[Already translated](http://localhost:4321/)"
+          comment: "[Already translated](https://ample-sea.cloudvent.net/)"
           inputs: []
   astro-bookshop-starter:
     label: Translation (de-de)
@@ -21,7 +21,7 @@ _inputs:
     type: textarea
     options: {}
     comment: Astro Bookshop Starter | [See
-      Context](http://localhost:4321/#:~:text=Astro%20Bookshop%20Starter)
+      Context](https://ample-sea.cloudvent.net/#:~:text=Astro%20Bookshop%20Starter)
   markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
     label: Translation (de-de)
     hidden: false
@@ -39,7 +39,7 @@ _inputs:
       Astro, using Bookshop components in CloudCannon**. Create your own copy,
       and start creating your own components to use in the CloudCannon CMS. |
       [See
-      Context](http://localhost:4321/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
+      Context](https://ample-sea.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
   markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-bookshophttps://cloudcannoncom/documentation/guides/bookshop-astro-guide/-blog-with-pagination-tags-and-snippetshttps://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx-image-optimizationhttps://docsastrobuild/en/guides/images/#image-astroassets-seo-controls-responsive-header-and-footer-font-awesome-iconshttps://fontawesomecom/search?o=randm=free-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
     label: Translation (de-de)
     hidden: false
@@ -81,6 +81,6 @@ _inputs:
       * CloudCannon configuration
 
       * CSS variables | [See
-      Context](http://localhost:4321/#:~:text=To%20help%20save,CSS%20variables)
+      Context](https://ample-sea.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
 markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: ""
 markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-bookshophttps://cloudcannoncom/documentation/guides/bookshop-astro-guide/-blog-with-pagination-tags-and-snippetshttps://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx-image-optimizationhttps://docsastrobuild/en/guides/images/#image-astroassets-seo-controls-responsive-header-and-footer-font-awesome-iconshttps://fontawesomecom/search?o=randm=free-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
