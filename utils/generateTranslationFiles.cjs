@@ -156,20 +156,22 @@ async function main(locale) {
           endHighlightArrayAll.length
         );
 
-        // TODO: Look to see if original phrase is 5 words or shorter, and if it is fallback to the encoded original phrase for the highlight link (instead of the start,end syntax)
-        // console.log('start: ', startHighlightArray);
-        // console.log('end: ', endHighlightArray);
+        // Look to see if original phrase is 5 words or shorter
+        // if it is fallback to the encoded original phrase for the highlight link
+        const originalPhraseArrayByWord = originalPhraseArray
+          .join(' ')
+          .split(' ');
 
         const startHighlight = startHighlightArray.join(' ').trim();
         const endHighlight = endHighlightArray.join(' ').trim();
-        const totalHighlight = startHighlight + ' ' + endHighlight;
+
         const encodedStartHighlight = encodeURI(startHighlight);
         const encodedEndHighlight = encodeURI(endHighlight);
-
         const encodedOriginalPhrase = encodeURI(originalPhraseArray.join(' '));
+
         const pageString = page.replace('.html', '').replace('index', '');
         const locationString =
-          originalPhrase.length >= totalHighlight.length
+          originalPhraseArrayByWord.length > urlHighlighterWordLength * 2
             ? `[See Context](${baseURL}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
             : `[See Context](${baseURL}${pageString}#:~:text=${encodedOriginalPhrase})`;
 
