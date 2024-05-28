@@ -88,10 +88,10 @@ content_blocks:
       hover_brightness: 0.85
       text_color: '#ffffff'
   - _bookshop_name: left_right
-    background_color: '#c8d5b9'
+    background_color: '#FEF9EF'
     heading:
-      heading_text: This is five words right?
-      color: '#a0a2ff'
+      heading_text: This is just five words!
+      color: '#c8d5b9'
     text:
       markdown_content: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
